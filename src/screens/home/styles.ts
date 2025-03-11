@@ -41,8 +41,33 @@ export const styles = StyleSheet.create({
     color: 'white',
     fontWeight: '700',
   },
+
+  movieText:{
+
+    color: "white",
+    fontWeight: 700,
+    fontSize: 18,
+    padding: 15,
+
+
+  },
   movieTheWheelImg: {
    width: "100%",
    alignItems: 'center',
   },
+
+  contentList: {
+    paddingLeft: 18,
+    paddingRight: 30,
+
+  },
+    contentMovies: {
+
+
+    },
+
+  
+
+  
 });
+
