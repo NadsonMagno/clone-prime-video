@@ -1,4 +1,4 @@
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, FlatList} from 'react-native';
 import React from 'react';
 
 import {styles} from "./styles";
@@ -7,6 +7,9 @@ import PrimeLogo from '../../assets/prime_video.png';
 import AmazonLogo from '../../assets/amazon_logo.png';
 
 import MovieTheWhell from '../../assets/movies/the_wheel_of_time.png';
+
+import MOVIESWATCHING from '../../utils/moviesWatching';
+import MovieCard from '../../components/MovieCard/MovieCard';
 
 export default function Home() {
     return (
@@ -42,6 +45,13 @@ export default function Home() {
             <TouchableOpacity style={styles.movieTheWheelImg}>
                 <Image source={MovieTheWhell}  />
             </TouchableOpacity>
+
+
+            <FlatList 
+            data={MOVIESWATCHING} 
+            keyExtractor={(item) => item.id.toString()}  
+            renderItem={({item})=> (<MovieCard movieURL={item.moviesURL}/>)}
+            /> 
         </View>
     );
     }
